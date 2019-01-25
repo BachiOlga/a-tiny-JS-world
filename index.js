@@ -7,8 +7,65 @@
 
 // ======== OBJECTS DEFINITIONS ========
 // Define your objects here
+const dog = {
+    name : 'Greta',
+    age : 5,
+    gender: 'female',
+    legs : 4,
+    hends : 0,
+    say : 'wow!'
+}
+const cat = {
+    name : 'Filya',
+    age : 3,
+    gender: 'male',
+    legs : 4,
+    hends : 0,
+    say : 'May-May!'
+}
+const woman = {
+    name : 'Olga',
+    age : 30,
+    gender: 'female',
+    legs : 2,
+    hends : 2,
+    say : 'Hello!'
+}
+const man = {
+    name : 'Artem',
+    age : 33,
+    gender: 'male',
+    legs : 2,
+    hends : 2,
+    say : 'Hi!'
+}
+const womanCat = {
+    name : 'Stefani',
+    age : 20,
+    gender: 'female',
+    legs : 2,
+    hends : 2,
+    say : cat.say
+}
+const description = (elements) => {
+    let result = '';
+    const group = Object.values(elements)
+    group.forEach(item => {
+        if( item === 0) {
+            return result;
+        }
+        result = result + `${item};`;
+        
+    })
 
-
+    return result;
+    
+}
+print(description(dog), `div`)
+print(description(cat), `div`)
+print(description(woman), `div`)
+print(description(man), `div`)
+print(description(womanCat), `div`)
 // ======== OUTPUT ========
 /* Use print(message) for output.
    Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
